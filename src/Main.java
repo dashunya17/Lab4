@@ -26,13 +26,13 @@ public class Main {
                 }
                 i++;
             }
-            step /= factor; 
+            step /= factor; //уменьшаем шаг 
         }
         while (step> 1);//выполняется пока шаг больше 1
         int[] positives = Arrays.stream(values).filter(num -> num > 0).toArray();//добавляем только положительные элементы
         Arrays.sort(positives);//сортируем положительные элементы
         int positiveIndex = 0;
-        for (int j = 0; j < values.length; j++) { //добавляем отрицательные элементы на свое место
+        for (int j = 0; j < values.length; j++) { //добавляем переменные на свои места 
             if (values[j] > 0) {
                 values[j] = positives[positiveIndex++];
             }
