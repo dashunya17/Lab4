@@ -26,7 +26,7 @@ public class Main {
                 }
                 i++;
             }
-            step /= factor; // вычисляем шаг
+            step /= factor; 
         }
         while (step> 1);
         int[] positives = Arrays.stream(values).filter(num -> num > 0).toArray();//добавляем только положительные элементы
