@@ -18,7 +18,7 @@ public class Main {
         int step = values.length - 1;
         do {
             int i = 0;
-            while (step + i < values.length) { 
+            while (step + i < values.length) { //находим выходит ли элемент за границы массива 
                 if (values[i] > 0 && values[i + step] > 0) { // сортируем только положительные
                     if (values[i] > values[i + step]) { //сравнивание элементы на расстоянии step
                         swap(values, i, i + step); //используем метод для замены элементов
