@@ -18,7 +18,7 @@ public class Main {
         int step = values.length - 1;
         do {
             int i = 0;
-            while (step + i < values.length) { //выполняется пока шаг больше 1
+            while (step + i < values.length) { 
                 if (values[i] > 0 && values[i + step] > 0) { // сортируем только положительные
                     if (values[i] > values[i + step]) { //сравнивание элементы на расстоянии step
                         swap(values, i, i + step); //используем метод для замены элементов
@@ -28,7 +28,7 @@ public class Main {
             }
             step /= factor; 
         }
-        while (step> 1);
+        while (step> 1);//выполняется пока шаг больше 1
         int[] positives = Arrays.stream(values).filter(num -> num > 0).toArray();//добавляем только положительные элементы
         Arrays.sort(positives);//сортируем положительные элементы
         int positiveIndex = 0;
